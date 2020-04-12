@@ -1,8 +1,8 @@
 {
-  "name": "pink-18",
+  "name": "planetarium",
   "version": "17.0.0",
   "private": true,
-  "description": "Личный проект «Пинк» от HTML Academy",
+  "description": "Мой учебный проект по макету",
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.x",
     "autoprefixer": "9.5.x",
@@ -13,6 +13,7 @@
     "gulp-sass": "4.0.x",
     "gulp-sourcemaps": "2.6.x",
     "gulp-stylus": "^2.7.0",
+    "husky": "^4.2.5",
     "stylelint": "10.1.x",
     "stylelint-config-htmlacademy": "0.1.x"
   },
@@ -40,9 +41,15 @@
     "node": "8.16"
   },
   "dependencies": {
+    "@commitlint/config-conventional": "^8.3.4",
     "del": "^5.1.0",
     "gulp-csso": "^4.0.1",
     "gulp-rename": "^2.0.0",
     "gulp-svgstore": "^7.0.1"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
   }
 }
