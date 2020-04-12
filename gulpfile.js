@@ -1,18 +1,18 @@
 "use strict";
 
 // include the required packages.
-var stylus = require('gulp-stylus');
+let stylus = require('gulp-stylus');
 
-var gulp = require("gulp");
-var plumber = require("gulp-plumber");
-var sourcemap = require("gulp-sourcemaps");
-var postcss = require("gulp-postcss");
-var autoprefixer = require("autoprefixer");
-var server = require("browser-sync").create();
-var csso = require("gulp-csso");
-var rename = require("gulp-rename");
-var del = require("del");
-var svgstore = require("gulp-svgstore");
+let gulp = require("gulp");
+let plumber = require("gulp-plumber");
+let sourcemap = require("gulp-sourcemaps");
+let postcss = require("gulp-postcss");
+let autoprefixer = require("autoprefixer");
+let server = require("browser-sync").create();
+let csso = require("gulp-csso");
+let rename = require("gulp-rename");
+let del = require("del");
+let svgstore = require("gulp-svgstore");
 
 gulp.task("css", function () {
     return gulp.src("source/styl/style.styl")
