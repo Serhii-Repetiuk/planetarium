@@ -16,7 +16,6 @@ let svgstore = require("gulp-svgstore");
 
 gulp.task("css", function () {
     return gulp.src("source/styl/style.styl")
-        .pipe(plumber())
         .pipe(sourcemap.init())
         .pipe(stylus())
         .pipe(postcss([
@@ -91,7 +90,7 @@ gulp.task("server", function () {
         ui: false
     });
 
-    gulp.watch("source/styl/**/*.{styl}", gulp.series("css", "min"));
+    gulp.watch("source/styl/**/*.styl", gulp.series("css", "min"));
     gulp.watch("source/*.html", gulp.series("html", "refresh"));
 });
 
