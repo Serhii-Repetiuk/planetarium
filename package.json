@@ -12,7 +12,12 @@
     "stylint": "stylint -c .stylintrc",
     "eslint": "eslint -c .eslintrc"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.0",
+    "@babel/polyfill": "^7.8.7",
+    "@babel/register": "^7.9.0"
+  },
   "devDependencies": {
     "@babel/preset-env": "^7.9.5",
     "@commitlint/cli": "^8.3.5",
