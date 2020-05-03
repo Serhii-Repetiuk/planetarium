@@ -1,52 +1,5 @@
+@import 'variables.styl'
+@import '../../node_modules/stylus-mixins'
 @import 'common.styl'
-@import 'pages/*.styl'
-
-.visually-hidden
-  position absolute
-  width 1px
-  height 1px
-  margin -1px
-  border 0
-  padding 0
-  clip rect(0 0 0 0)
-  overflow hidden
-
-  //Стили для акордеона
-
-.questions
-  background-color #957DAD
-  display flex
-  flex-direction column
-  padding-left 300px
-  padding-right 300px
-
-  .questions__item
-    background-color #D291BC
-    border 5px solid #FFDFD3
-    min-height 100%
-
-.question
-  display flex
-  flex-direction column
-
-  .question__container
-    display flex
-
-  .question__container
-    background-color #D291BC
-    color #444
-    cursor pointer
-    width 100%
-    border none
-    text-align left
-    outline none
-    font-size 15px
-    transition 0.4s
-
-  .question__text-container
-    padding 0 18px
-    background-color: white
-    max-height 0
-    overflow hidden
-    transition max-height 0.2s ease-out
-
+@import 'blocks/**/*.styl'
+@import 'components/**/*.styl"

@@ -9,8 +9,8 @@
     "test": "npm run editorconfig && npm run stylelint",
     "build": "gulp build",
     "start": "gulp start",
-    "stylint": "stylint -c .stylintrc",
-    "eslint": "eslint -c .eslintrc"
+    "stylint": "stylint -c .stylintrc source/styl/**/*.styl",
+    "eslint": "eslint -c .eslintrc source/js/**/*.js"
   },
   "dependencies": {
     "@babel/cli": "^7.8.4",
@@ -44,7 +44,8 @@
     "husky": "^4.2.5",
     "stylelint": "10.1.x",
     "stylelint-config-htmlacademy": "0.1.x",
-    "stylint": "^2.0.0"
+    "stylint": "^2.0.0",
+    "stylus-mixins": "https://github.com/glebmachine/stylus-mixins"
   },
   "husky": {
     "hooks": {
