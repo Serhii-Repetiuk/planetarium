@@ -78,17 +78,18 @@ gulp.task('refresh', (done) => {
   done();
 });
 
-gulp.task('server', () => server.init({
-  server: 'build/',
-  notify: false,
-  open: true,
-  cors: true,
-  ui: false,
-}));
-
-gulp.watch('source/styl/**/*.styl', gulp.series('css', 'min'));
-gulp.watch('source/*.html', gulp.series('html', 'refresh'));
-gulp.watch('source/js/**/*.js', gulp.series('js', 'refresh'));
+gulp.task("server", function () {
+  server.init({
+    server: "build/",
+    notify: false,
+    open: true,
+    cors: true,
+    ui: false
+  });
+  gulp.watch('source/styl/**/*.styl', gulp.series('css', 'min'));
+  gulp.watch('source/*.html', gulp.series('html', 'refresh'));
+  gulp.watch('source/js/**/*.js', gulp.series('js', 'refresh'));
+});
 
 gulp.task('build', gulp.series(
   'clean',
