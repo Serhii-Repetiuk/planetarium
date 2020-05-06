@@ -78,13 +78,13 @@ gulp.task('refresh', (done) => {
   done();
 });
 
-gulp.task("server", function () {
+gulp.task('server', function () {
   server.init({
-    server: "build/",
+    server: 'build/',
     notify: false,
     open: true,
     cors: true,
-    ui: false
+    ui: false,
   });
   gulp.watch('source/styl/**/*.styl', gulp.series('css', 'min'));
   gulp.watch('source/*.html', gulp.series('html', 'refresh'));
