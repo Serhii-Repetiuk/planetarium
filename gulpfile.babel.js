@@ -24,10 +24,8 @@ gulp.task('css', () => gulp
   .pipe(server.stream()));
 
 gulp.task('js', () => gulp
-  .src('source/js/script.js')
-  .pipe(sourcemap.init())
+  .src('source/js/**/*.js')
   .pipe(babel({ presets: ['@babel/preset-env'] }))
-  .pipe(sourcemap.write('.'))
   .pipe(gulp.dest('build/js'))
   .pipe(server.stream()));
 
