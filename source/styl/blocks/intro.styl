@@ -2,18 +2,29 @@
   background-color grey
   max-width  1366px
   max-height  768px
-  background-image url("../../img/intro-background.png")
+  background-image url("../../img/intro-bg.png")
   background-size cover
   background-repeat no-repeat
   margin-left auto
   margin-right auto
 
 .intro
+  position relative
   padding-top 160px
+  padding-bottom 160px
   margin-left 120px
+
+  &__description
+    font-weight 300
+    font-size 17px
+    line-height (25 / 17)
 
   &__capabilities
     display flex
+    padding-top 70px
+
+  &__capabilities-container
+    position relative
 
   &__order
     background-color #0DD1A2
@@ -32,3 +43,15 @@
     border-radius 2px
     padding 3px 10px 3px 10px
     margin-left 10px
+
+  &__decorative-img
+    width 430px
+    height 350px
+    position absolute
+    right 0
+    bottom 0
+    background-image url("../../img/kid_VR.png")
+    background-size cover
+    background-repeat no-repeat
+
+
