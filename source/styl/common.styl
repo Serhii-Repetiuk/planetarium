@@ -1,3 +1,21 @@
+@font-face {
+  font-family: "Ubuntu";
+  src: url("/fonts/ubuntu-regular.woff2") format("woff2"),
+       url("/fonts/ubuntu-regular.woff") format("woff");
+}
+
+.permanent-background
+  background-color grey
+  background-image url("/img/permanent-bg.png")
+  -moz-background-size 100% /* Firefox 3.6+ */
+  -webkit-background-size 100% /* Safari 3.1+ и Chrome 4.0+ */
+  -o-background-size 100% /* Opera 9.6+ */
+  background-size 100%
+  background-attachment fixed
+  background-repeat no-repeat
+  margin-left auto
+  margin-right auto
+
 body
   background-color gray
   font-family 'Ubuntu', 'Arial', sans-serif
@@ -5,6 +23,7 @@ body
   min-width 320px
   padding 0
   margin 0
+
 h1
   font-weight 600
   font-size 96px
@@ -42,6 +61,8 @@ ul
 button
   font-family 'Ubuntu', 'Arial', sans-serif
 
+.page-title
+  margin 0
 
 .button
   background-color transparent

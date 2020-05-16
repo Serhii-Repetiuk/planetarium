@@ -1,12 +1,23 @@
 .main-background
+  position relative
   background-color grey
-  max-width  1366px
-  max-height  768px
+  height 100vh
   background-image url("../../img/intro-bg.png")
+  background-attachment fixed
   background-size cover
   background-repeat no-repeat
   margin-left auto
   margin-right auto
+
+  &__decorative-img
+    width 430px
+    height 350px
+    position absolute
+    right 0
+    bottom 0
+    background-image url("../../img/kid_VR.png")
+    background-size cover
+    background-repeat no-repeat
 
 .intro
   position relative
@@ -44,14 +55,5 @@
     padding 3px 10px 3px 10px
     margin-left 10px
 
-  &__decorative-img
-    width 430px
-    height 350px
-    position absolute
-    right 0
-    bottom 0
-    background-image url("../../img/kid_VR.png")
-    background-size cover
-    background-repeat no-repeat
 
 
