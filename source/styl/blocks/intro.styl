@@ -38,22 +38,49 @@
     position relative
 
   &__order
+    position relative
     background-color #0DD1A2
+    padding 22px 35px 22px 80px
+
     font-weight bold
     font-size 21px
     line-height (24 / 21)
-    padding 5px 10px 5px 10px
+    letter-spacing 0.1em
+
+    &:before
+      content ''
+      position absolute
+      background-image url("../../img/order-button-img.svg")
+      background-size cover
+      background-repeat no-repeat
+      width 31px
+      height 31px
+      left 39px
+      top 18px
 
   &__play-video
-    font-weight bold
-    font-size 21px
-    line-height (24 / 21)
     background-color transparent
     border 2px solid #0DD1A2
     box-sizing border-box
     border-radius 2px
-    padding 3px 10px 3px 10px
-    margin-left 10px
+    padding 20px 35px 20px 80px
+    margin-left 5px
+
+    font-weight bold
+    font-size 21px
+    line-height (24 / 21)
+    letter-spacing 0.1em
+
+    &:before
+      content ''
+      position absolute
+      background-image url("../../img/video-button-img.svg")
+      background-size cover
+      background-repeat no-repeat
+      width 31px
+      height 31px
+      left 43px
+      top -3px
 
 
 
