@@ -4,8 +4,6 @@
   },
   "extends": ["airbnb-base"],
   "rules": {
-    "no-use-before-define": "off",
-    "prefer-const": "off",
     "no-plusplus": [2, {"allowForLoopAfterthoughts": true}]
   }
 }

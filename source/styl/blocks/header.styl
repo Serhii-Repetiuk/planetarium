@@ -10,11 +10,25 @@
   right 0
 
 .main-nav
-
   &__list
     display flex
     text-transform uppercase
     letter-spacing 0.05em
+
+    li
+      position relative
+
+    li:not(:last-child):before
+      content ''
+      position absolute
+      background-size cover
+      background-repeat no-repeat
+      background-image url("../../img/navigation-dot.svg")
+      width 8px
+      height 8px
+      right -18px
+      top 10px
+
   &__item
     margin-left 15px
     margin-right 15px
@@ -22,16 +36,15 @@
   &__link
     display inline-block
     vert-align middle
-    padding 5px 10px 5px 10px
+    padding 5px 10px
 
 .user-capabilities
-
   &__button
     font-weight bold
     font-size 14px
     line-height (16 / 14)
-    padding 5px 10px 5px 10px
+    padding 5px 10px
 
   &__phone
-    padding 5px 10px 5px 10px
+    padding 5px 10px
 

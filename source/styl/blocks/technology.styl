@@ -1,17 +1,91 @@
 .technologies
-  position relative
-  padding-top 150px
-  padding-left 90px
+  &__main-container
+    position relative
+    padding-top 150px
+    padding-left 120px
+  &__container
+    &:nth-child(1)
+      padding-right 20px
+
+      div:nth-child(1) //Двигает верхний правый блок
+        position relative
+
+      div:nth-child(1):before //Усик #1
+        content ''
+        position absolute
+        background-size cover
+        background-repeat no-repeat
+        background-image url("../../img/technology-tail-1.svg")
+        width 233px
+        height 148px
+        left 211px
+        top 11px
+
+      div:nth-child(2)
+        position relative
+
+      div:nth-child(2):before //Усик #2
+        content ''
+        position absolute
+        background-size cover
+        background-repeat no-repeat
+        background-image url("../../img/technology-tail-2.svg")
+        width 443px
+        height 90px
+        left 165px
+        bottom 199px
+
+    &:nth-child(3)
+      padding-right 20px
+
+      div:nth-child(1) //Двигает верхний правый блок вправо согласно макету
+        position relative
+        padding-left 40px
+
+      div:nth-child(1):before //Усик #3
+        content ''
+        position absolute
+        background-size cover
+        background-repeat no-repeat
+        background-image url("../../img/technology-tail-3.svg")
+        width 324px
+        height 130px
+        right 312px
+        top 11px
+
+      div:nth-child(2)
+        position relative
+
+      div:nth-child(2):before //Усик #4
+        content ''
+        position absolute
+        background-size cover
+        background-repeat no-repeat
+        background-image url("../../img/technology-tail-4.svg")
+        width 123px
+        height 90px
+        right 309px
+        bottom 182px
+
+  &__img
+    width 480px
+    height 480px
+    padding 0 55px 0 0
 
   &__list
+    padding-top 55px
+    padding-left 40px
     display flex
-    flex-wrap wrap
-    max-width 1000px
+
+  &__page-down-container
+    display flex
 
 .technology
-  max-width 400px
+  max-width 300px
+  padding-bottom 50px
 
   &__title
+    margin-bottom 0
     font-weight 600
     font-size 21px
     line-height (24 / 21)

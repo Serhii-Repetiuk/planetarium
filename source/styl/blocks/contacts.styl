@@ -1,19 +1,37 @@
 .contacts
-  padding-top 150px
-  padding-left 90px
+  position relative
+  padding 150px 0px 200px 120px
 
   &__container
     display flex
     padding-top 58px
 
 .contact
+  display flex
+  flex-direction column
   padding-bottom 30px
 
   &__title
     margin-top 0
     margin-bottom 13px
 
+  &__phone
+    margin-bottom 10px
+
+  a
+    font-weight 300
+    font-size 15px
+    line-height (19 / 15)
+
 .form
+  padding-left 60px
+
+  input,
+  textarea
+    color rgba(0, 0, 0, 0.5)
+    font-size 13px
+    line-height (17 / 13)
+
   &__title
     margin-top 0
     margin-bottom 13px
@@ -26,3 +44,29 @@
 
   &__user-info-container
     display flex
+    justify-content space-between
+
+  &__mail-body-container
+    padding-top 11px
+
+  &__send
+    max-width 120px
+    min-height 34px
+
+.user-email
+  &__input
+    width 280px
+    height 46px
+    padding-left 15px
+
+.user-name
+  &__input
+    width 280px
+    height 46px
+    padding-left 15px
+
+.mail-body
+  &__textarea
+    padding-top 15px
+    padding-left 15px
+    margin-bottom 20px
