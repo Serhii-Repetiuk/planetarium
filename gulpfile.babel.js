@@ -74,6 +74,11 @@ gulp.task('sprite', () => gulp
   .pipe(rename('sprite.svg'))
   .pipe(gulp.dest('build/img')));
 
+gulp.task('posthtml', function() {
+  return gulp.src('*.html');
+  // .pipe() сделать действия, чтобы компоненты html из source/html инклюдились в билд страниц;
+});
+
 gulp.task('cleanLogos', () => del('build/img/logo-*.svg'));
 
 gulp.task('clean', () => del('build'));
@@ -87,7 +92,7 @@ gulp.task('refresh', (done) => {
   done();
 });
 
-gulp.task('server', function () {
+gulp.task('server', function() {
   server.init({
     server: 'build/',
     notify: false,
