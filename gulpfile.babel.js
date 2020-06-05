@@ -2,7 +2,7 @@
 const gulp = require('gulp');
 const stylus = require('gulp-stylus');
 const plumber = require('gulp-plumber');
-const sourcemap = require('gulp-sourcemaps');
+// const sourcemap = require('gulp-sourcemaps');
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const server = require('browser-sync').create();
@@ -11,15 +11,26 @@ const rename = require('gulp-rename');
 const del = require('del');
 const svgstore = require('gulp-svgstore');
 const babel = require('gulp-babel');
+const posthtml = require('gulp-posthtml');
+const include = require('posthtml-include');
+
+gulp.task('postHtml', () => gulp
+  .src('source/index.html')
+  .pipe(posthtml([
+    include()
+  ]))
+  .pipe(gulp.dest('source'))
+  .pipe(server.stream()));
+
 
 gulp.task('css', () => gulp
   .src('source/styl/style.styl')
-  .pipe(sourcemap.init())
+  // .pipe(sourcemap.init())
   .pipe(stylus())
   .pipe(postcss([
     autoprefixer(),
   ]))
-  .pipe(sourcemap.write('.'))
+  // .pipe(sourcemap.write('.'))
   .pipe(gulp.dest('build/css'))
   .pipe(server.stream()));
 
@@ -32,14 +43,14 @@ gulp.task('js', () => gulp
 gulp.task('min', () => gulp
   .src('source/styl/style.styl')
   .pipe(plumber())
-  .pipe(sourcemap.init())
+  // .pipe(sourcemap.init())
   .pipe(stylus())
   .pipe(postcss([
     autoprefixer(),
   ]))
   .pipe(csso())
   .pipe(rename('style.min.css'))
-  .pipe(sourcemap.write('.'))
+  // .pipe(sourcemap.write('.'))
   .pipe(gulp.dest('build/css'))
   .pipe(server.stream()));
 
@@ -90,7 +101,9 @@ gulp.task('server', function () {
 });
 
 gulp.task('build', gulp.series(
+  'postHtml',
   'clean',
+  'html',
   'copy',
   'sprite',
   'cleanLogos',
