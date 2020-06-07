@@ -14,15 +14,6 @@ const babel = require('gulp-babel');
 const posthtml = require('gulp-posthtml');
 const include = require('posthtml-include');
 
-gulp.task('postHtml', () => gulp
-  .src('source/index.html')
-  .pipe(posthtml([
-    include()
-  ]))
-  .pipe(gulp.dest('source'))
-  .pipe(server.stream()));
-
-
 gulp.task('css', () => gulp
   .src('source/styl/style.styl')
   // .pipe(sourcemap.init())
@@ -74,17 +65,19 @@ gulp.task('sprite', () => gulp
   .pipe(rename('sprite.svg'))
   .pipe(gulp.dest('build/img')));
 
-gulp.task('posthtml', function() {
-  return gulp.src('*.html');
-  // .pipe() сделать действия, чтобы компоненты html из source/html инклюдились в билд страниц;
-});
+gulp.task('posthtml', () => gulp
+  .src('source/*.html')
+  .pipe(posthtml([
+    include()
+  ]))
+  .pipe(gulp.dest('build/')));
 
 gulp.task('cleanLogos', () => del('build/img/logo-*.svg'));
 
 gulp.task('clean', () => del('build'));
 
 gulp.task('html', () => gulp
-  .src('source/*.html')
+  .src('source/index.html')
   .pipe(gulp.dest('build/')));
 
 gulp.task('refresh', (done) => {
@@ -106,10 +99,10 @@ gulp.task('server', function() {
 });
 
 gulp.task('build', gulp.series(
-  'postHtml',
   'clean',
-  'html',
   'copy',
+  'html',
+  'posthtml',
   'sprite',
   'cleanLogos',
   'js',
