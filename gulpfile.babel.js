@@ -52,6 +52,7 @@ gulp.task('copy', () => gulp
     'source/js**/*.js',
     'source/*.ico',
     'source/*.html',
+    'source/*.css',
   ], {
     base: 'source',
   })

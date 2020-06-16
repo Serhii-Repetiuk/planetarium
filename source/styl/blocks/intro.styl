@@ -1,9 +1,7 @@
 .main-background
-  height 100vh
   position relative
   background-color grey
   background-image url("../../img/intro-bg.png")
-  background-attachment fixed
   background-size cover
   background-repeat no-repeat
   margin-left auto
@@ -30,8 +28,8 @@
     font-size 17px
     line-height (25 / 17)
 
-  &__description-text
-    margin 5px 0
+    p
+     margin 5px 0
 
   &__capabilities
     display flex
@@ -93,7 +91,7 @@
   display flex
   align-items center
 
-  img
+  svg
     position absolute
     padding 15px
     opacity 0.64
