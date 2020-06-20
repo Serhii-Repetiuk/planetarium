@@ -88,13 +88,16 @@
     @media (min-width 768px) and (max-width 1023px)
       background-color blue
 
+     &:hover
+       background-color #0DD1A2
+       cursor pointer
+
   &__button-img
     top 22px
     left 24px
     position absolute
     width 26px
     height 26px
-    background url('../../img/plus.svg') 0 50% no-repeat
     transition transform 0.3s
     +width-between(769, 1024)
       top 16px

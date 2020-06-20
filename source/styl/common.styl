@@ -67,12 +67,19 @@ button
 .button
   background-color transparent
   color #FFFFFF
-  border 2px solid #0DD1A2
   box-sizing border-box
-  border-radius 2px
+  border 2px solid #0DD1A2
+  vertical-align middle
 
   text-transform uppercase
   letter-spacing 0.05em
+
+  &:hover
+    box-sizing border-box
+    border-radius 2px
+    background-color #0DD1A2
+    cursor pointer
+
 
 .visually-hidden
   position absolute
@@ -83,6 +90,8 @@ button
   padding 0
   clip rect(0 0 0 0)
   overflow hidden
+
+//Стили для стрелки "вниз"
 
 .page-down
   position relative
@@ -111,4 +120,129 @@ button
     background-image url("/img/arrow-down.svg")
     background-size cover
     background-position center
+
+//    Стили для иконок соц-сетей
+
+.social-list
+  position relative
+  display flex
+  align-items center
+
+  svg
+    position absolute
+    padding 15px
+    opacity 0.64
+
+    &:hover
+      opacity 1
+
+  &__facebook
+    display block
+    width 11px
+    height 22px
+    bottom -3px
+    left 52px
+
+  &__vk
+    display block
+    width 28px
+    height 15px
+    bottom 0
+    left 86px
+
+
+// Стили для формы заказа
+
+.order
+  position relative
+  left 50%
+  top 50%
+  width 560px
+  height 380px
+  bottom 10px
+  margin-top -190px
+  margin-left -280px
+  padding 30px 60px
+  box-sizing border-box
+  background-color #F3F3F3
+  border-radius: 3px
+
+  &__container
+    display flex
+    flex-direction column
+    align-items center
+
+  &__title
+    font-weight bold
+    font-size 21px
+    line-height 1.1
+
+  &__paragraph
+    text-align center
+    font-size 15px
+    line-height 1.3
+    opacity 0.64
+
+
+.order-form
+  display flex
+  flex-direction column
+  align-items center
+
+  input
+    display flex
+    width 400px
+    height 46px
+    padding-left 20px
+    margin-bottom 9px
+    border none
+    opacity 0.4
+    box-shadow 0 2px 5px rgba(0, 0, 0, 0.05)
+
+  &__send
+    width 125px
+    height 34px
+
+    color rgba(0, 0, 0, 0.4)
+    font-weight bold
+    font-size 14px
+    line-height 1.1
+
+    &:hover
+      color white
+
+  &__close
+    position absolute
+    right 0
+    top 0
+    border none
+    padding 15px
+    cursor pointer
+
+.modal
+  position: fixed
+  color: #000000
+  box-shadow: 0 10px 20px 0 rgba(4, 6, 6, 0.2)
+  z-index: 2
+
+
+@keyframes bounce {
+  0%   { transform: translateY(-2000px); }
+  70%  { transform: translateY(30px);    }
+  90%  { transform: translateY(-10px);   }
+  100% { transform: translateY(0);       }
+}
+
+.modal-show
+  animation-name bounce
+  animation-duration: 0.5s
+
+.modal-shadow
+  background-color rgba(0, 0, 0, 0.8)
+  height 100%
+  left 0
+  position fixed
+  top: 0
+  width: 100%
+  z-index: 1
 
