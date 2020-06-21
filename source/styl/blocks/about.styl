@@ -17,6 +17,16 @@
 
   &__gallery
     padding 150px 30px 20px 30px
+    position relative
+    &:before
+      content ''
+      position absolute
+      border 5px solid #0DD1A2
+      width 545px
+      height 300px
+      left 58px
+      bottom 76px
+      z-index 0
 
   &__page-down-container
     display flex
@@ -25,7 +35,10 @@
   &__title
     margin 0
     position absolute
+    z-index 3
 
   &__image
+    position relative
     width 562px
     height 300px
+    z-index 1
