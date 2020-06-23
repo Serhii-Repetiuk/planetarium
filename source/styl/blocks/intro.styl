@@ -1,9 +1,98 @@
 .main-background
+  position relative
   background-color grey
-  max-width  1366px
-  max-height  768px
-  background-image url("../../img/intro-background.png")
+  background-image url("../../img/intro-bg.png")
   background-size cover
   background-repeat no-repeat
   margin-left auto
   margin-right auto
+
+  &__decorative-img
+    width 430px
+    height 350px
+    position absolute
+    right 0
+    bottom 0
+    background-image url("../../img/kid_VR.png")
+    background-size cover
+    background-repeat no-repeat
+
+.intro
+  position relative
+  padding-top 160px
+  padding-bottom 110px
+  margin-left 120px
+
+  &__description
+    font-weight 300
+    font-size 17px
+    line-height (25 / 17)
+
+    p
+     margin 5px 0
+
+  &__capabilities
+    display flex
+    padding-top 70px
+
+  &__capabilities-container
+    position relative
+
+  &__order
+    position relative
+    background-color #15B38D
+    padding 22px 28px 22px 63px
+
+    font-weight bold
+    font-size 21px
+    line-height (24 / 21)
+    letter-spacing 0.1em
+
+    &:hover
+      background-color #0DD1A2
+
+    &:before
+      content ''
+      position absolute
+      background-image url("../../img/order-button-img.svg")
+      background-size cover
+      background-repeat no-repeat
+      width 31px
+      height 31px
+      left 25px
+      top 18px
+
+  &__play-video
+    background-color transparent
+    border 2px solid #15B38D
+    box-sizing border-box
+    border-radius 2px
+    padding 20px 35px 20px 80px
+    margin-left 5px
+
+    font-weight bold
+    font-size 21px
+    line-height (24 / 21)
+    letter-spacing 0.1em
+
+    &:hover
+      background-color #0DD1A2
+      border 2px solid #0DD1A2
+
+    &:before
+      content ''
+      position absolute
+      background-image url("../../img/video-button-img.svg")
+      background-size cover
+      background-repeat no-repeat
+      width 31px
+      height 31px
+      left 43px
+      top -3px
+
+  &__footer-container
+    display flex
+
+
+
+

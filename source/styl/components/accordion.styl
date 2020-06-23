@@ -1,24 +1,21 @@
 .questions
-  background-color #957DAD
   display flex
   flex-direction column
-  padding-left 300px
-  padding-right 300px
 
   &__item
-    background-color #D291BC
-    border 5px solid #FFDFD3
     min-height 100%
+    padding 0 0 5px 0
 
 .question
   display flex
   flex-direction column
 
   &__container
+    max-height 68px
     display flex
-
-  &__container
-    background-color #D291BC
+    align-items center
+    justify-content space-between
+    background-color #ffffff
     color #444
     cursor pointer
     width 100%
@@ -27,10 +24,84 @@
     outline none
     font-size 15px
     transition 0.4s
+    +width-between(769, 1024)
+      max-height 56px
+
+  &__title
+    position relative
+    padding-left 45px
+    max-width 832px
+    font-weight 500
+    font-size 17px
+    line-height ( 28 / 21)
+    +width-between(769, 1024)
+      font-size 14px
+
+    &:before
+      content ''
+      position absolute
+      background-size cover
+      background-repeat no-repeat
+      background-image url("../../img/question-title-dot.svg")
+      width 8px
+      height 8px
+      left 24px
+      top 8px
 
   &__text-container
-    padding 0 18px
+    max-width 940px
+    color black
+    min-height 100%
+    padding -4px 18px 9px 18px
+    margin-top 0
     background-color: white
     max-height 0
     overflow hidden
     transition max-height 0.2s ease-out
+
+  &__text
+    margin 0
+    font-weight 300
+    font-size 15px
+    line-height 1.5
+    padding 0 210px 15px 60px
+
+  &__button
+    padding 0
+    cursor pointer
+    position relative
+    min-width 72px
+    min-height 68px
+    border none
+    background-color #15B38D
+    +width-between(769, 1024)
+      min-width 60px
+      min-height 56px
+    @media (min-width 768px) and (max-width 1023px)
+      background-color red
+    +width-morethan(1440)
+      background-color saddlebrown
+    @media (min-width 1440px)
+      background-color #15B38D
+     +width-lessthan(1024)
+      background-color yellowgreen
+    @media (min-width 768px) and (max-width 1023px)
+      background-color blue
+
+     &:hover
+       background-color #0DD1A2
+       cursor pointer
+
+  &__button-img
+    top 22px
+    left 24px
+    position absolute
+    width 26px
+    height 26px
+    transition transform 0.3s
+    +width-between(769, 1024)
+      top 16px
+      left 19px
+
+    &--active
+      transform rotate(50deg)
