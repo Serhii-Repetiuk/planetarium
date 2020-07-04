@@ -69,7 +69,7 @@ gulp.task('sprite', () => gulp
 gulp.task('posthtml', () => gulp
   .src('source/*.html')
   .pipe(posthtml([
-    include()
+    include(),
   ]))
   .pipe(gulp.dest('build/')));
 
@@ -95,7 +95,7 @@ gulp.task('server', function() {
     ui: false,
   });
   gulp.watch('source/styl/**/*.styl', gulp.series('css', 'min'));
-  gulp.watch('source/*.html', gulp.series('html', 'refresh'));
+  gulp.watch('source/*.html', gulp.series('html', 'posthtml', 'refresh'));
   gulp.watch('source/js/**/*.js', gulp.series('js', 'refresh'));
 });
 
