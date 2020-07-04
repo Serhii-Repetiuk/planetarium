@@ -10,7 +10,6 @@ orderButton.addEventListener('click', function (evt) {
   modalShadow.classList.remove('visually-hidden');
 });
 
-
 close.addEventListener('click', function (evt) {
   evt.preventDefault();
   orderForm.classList.add('visually-hidden');
