@@ -1,4 +1,5 @@
 const questionBar = document.querySelectorAll('.question__container');
+const questionOpen = document.querySelector('question__button-img--active');
 
 for (let i = 0; i < questionBar.length; i++) {
   questionBar[i].addEventListener('click', function handler() {
@@ -11,3 +12,8 @@ for (let i = 0; i < questionBar.length; i++) {
     }
   });
 }
+
+questionOpen.addEventListener('click', function (evt) {
+  evt.preventDefault();
+  questionBar.classList.remove('question__button-img--active');
+});

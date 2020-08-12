@@ -96,6 +96,7 @@ gulp.task('server', function() {
   });
   gulp.watch('source/styl/**/*.styl', gulp.series('css', 'min'));
   gulp.watch('source/*.html', gulp.series('html', 'posthtml', 'refresh'));
+  gulp.watch('source/html/*.html', gulp.series('html', 'posthtml', 'refresh'));
   gulp.watch('source/js/**/*.js', gulp.series('js', 'refresh'));
 });
 
